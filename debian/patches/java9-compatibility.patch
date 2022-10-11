@@ -1,0 +1,56 @@
+Description: Fixes the compilation errors with Java 9
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/src/com/l2fprod/gui/nativeskin/win32/Win32NativeSkin.java
++++ b/src/com/l2fprod/gui/nativeskin/win32/Win32NativeSkin.java
+@@ -200,48 +200,11 @@
+    * @return        The HWND value
+    */
+   private static int getHWND(Window window) {
+-    if (window.getPeer() == null) {
++    if (!window.isDisplayable()) {
+       window.addNotify();
+     }
+ 
+-    if (OS.isOneDotFourOrMore()) {
+-      return getHWND0(window);
+-    } else {
+-      try {
+-      Object drawingSurfaceInfo;
+-      int hwnd = 0;
+-            
+-      // Get the drawing surface
+-      // drawingSurfaceInfo =
+-      //   ((sun.awt.DrawingSurface) (window.getPeer())).getDrawingSurfaceInfo();
+-      drawingSurfaceInfo =
+-        Class.forName("sun.awt.DrawingSurface").
+-        getMethod("getDrawingSurfaceInfo", null).
+-        invoke(window.getPeer(), null);
+-
+-      if (null != drawingSurfaceInfo) {
+-        // drawingSurfaceInfo.lock();
+-        AccessUtils.invoke(drawingSurfaceInfo, "lock", null, null);
+-
+-        // Get the Win32 specific information
+-        // win32DrawingSurface =
+-        //   (sun.awt.Win32DrawingSurface) drawingSurfaceInfo.getSurface();
+-        Object win32DrawingSurface =
+-          AccessUtils.invoke(drawingSurfaceInfo, "getSurface", null, null);
+-
+-        // hwnd = win32DrawingSurface.getHWnd();
+-        hwnd = AccessUtils.getAsInt(win32DrawingSurface, "getHWnd");
+-
+-        // drawingSurfaceInfo.unlock();
+-        AccessUtils.invoke(drawingSurfaceInfo, "unlock", null, null);
+-      }
+-      return hwnd;
+-        
+-      } catch (Throwable throwable) {
+-        throwable.printStackTrace();
+-        throw new Error(throwable);
+-      }
+-    }
++    return getHWND0(window);
+   }
+ 
+   /**

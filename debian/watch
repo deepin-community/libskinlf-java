@@ -1,0 +1,3 @@
+version=3
+http://skinlf.l2fprod.com/download/index.php .*/skinlf-(.*)-.*.zip \
+  debian debian/orig-tar.sh

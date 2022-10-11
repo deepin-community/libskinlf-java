@@ -1,0 +1,87 @@
+libskinlf-java (6.7-10) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure with Java 9 (Closes: #874653)
+  * Build with the DH sequencer instead of CDBS
+  * Standards-Version updated to 4.1.2
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 01 Dec 2017 09:18:02 +0100
+
+libskinlf-java (6.7-9) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure caused by the switch from substance to insubstantial
+  * Moved the package to Git
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Switch to debhelper level 9
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 22 May 2016 14:28:28 +0200
+
+libskinlf-java (6.7-8) unstable; urgency=low
+
+  * Team upload.
+  * Switch to default-jdk. (Closes: #643536).
+  * Bump Standards-Version to 3.9.2. No changes were required.
+  * Fix Vcs-* fields.
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Sun, 23 Oct 2011 12:32:42 -0430
+
+libskinlf-java (6.7-7) unstable; urgency=low
+
+  * Switch to debhelper level 7.
+  * Update Standards-Version: 3.9.1.
+  * Remove Java runtime from Depends.
+  * Switch to source format 3.0.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Aug 2011 23:43:34 +0200
+
+libskinlf-java (6.7-6) unstable; urgency=low
+
+  * Change of my email address since I am now DD 
+  * Standards-Version updated to 3.8.3
+  * DM-Upload-Allowed removed
+  * openjdk-6-jdk => default-jdk
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 27 Nov 2009 10:37:44 +0100
+
+libskinlf-java (6.7-5) unstable; urgency=low
+
+  [ Sylvestre Ledru ]
+  * Build with openjdk instead of gcj
+
+  [ Torsten Werner ]
+  * Change Maintainer: Debian Java Maintainers.
+  * Change Section: java.
+  * Add missing Depends: ${misc:Depends}.
+  * Update Standards-Version: 3.8.2 (no changes).
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Jun 2009 20:30:52 +0200
+
+libskinlf-java (6.7-4) unstable; urgency=low
+
+  * Lintian warning removed (refers to the file 
+    /usr/share/common-licenses/Apache-2.0)
+  * Updated to Standards-Version: 3.8.0
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 25 Jun 2008 10:37:14 +0200
+
+libskinlf-java (6.7-3) unstable; urgency=low
+
+  * Add DM-Upload-Allowed: yes to enable uploads by Sylvestre.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 29 Apr 2008 20:37:18 +0200
+
+libskinlf-java (6.7-2) unstable; urgency=low
+
+  * Updated to Standards-Version: 3.7.3 (no changes needed).
+  * Update of the descriptions to make lintian happy.
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Sat, 22 Dec 2007 12:56:27 +0100
+
+libskinlf-java (6.7-1) unstable; urgency=low
+
+  * Initial Release (Closes: #454652)
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Sun, 30 Sep 2007 00:32:33 +0100
+

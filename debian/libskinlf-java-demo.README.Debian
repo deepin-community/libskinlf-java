@@ -1,0 +1,11 @@
+skinlf for Debian
+-----------------
+
+This package provides a few demos. These demos show the feature of Skin Look And Feel.
+
+The demo can be launched with this command : 
+
+	java -classpath /usr/share/java/skinlf-demo.jar:/usr/share/java/skinlf.jar examples.demo
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>, Wed, 05 Dec 2007 13:45:32 +0100
+

@@ -1,0 +1,14 @@
+Description: Fixed the build failure caused by the switch from substance to insubstantial
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/src/com/l2fprod/gui/plaf/skin/LafPluginSupport.java
++++ b/src/com/l2fprod/gui/plaf/skin/LafPluginSupport.java
+@@ -19,7 +19,7 @@
+ 
+ import javax.swing.UIDefaults;
+ 
+-import org.jvnet.lafplugin.ComponentPluginManager;
++import org.pushingpixels.lafplugin.ComponentPluginManager;
+ 
+ /**
+  * Implements support for the laf-plugin project.

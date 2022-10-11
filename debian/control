@@ -1,0 +1,50 @@
+Source: libskinlf-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Sylvestre Ledru <sylvestre@debian.org>,
+ Torsten Werner <twerner@debian.org>
+Build-Depends:
+ ant,
+ ant-optional,
+ debhelper (>= 10),
+ default-jdk,
+ imagemagick,
+ liblaf-plugin-java,
+ libxalan2-java
+Standards-Version: 4.1.2
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/libskinlf-java.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/libskinlf-java.git
+Homepage: http://skinlf.l2fprod.com
+
+Package: libskinlf-java
+Architecture: all
+Depends: liblaf-plugin-java, libxalan2-java, ${misc:Depends}
+Suggests: libskinlf-java-demo
+Description: Skin Look and Feel - Skinning Engine for the Swing toolkit
+ Skin Look And Feel allows Java developers to write skinnable application
+ using the Swing toolkit. Skin Look And Feel is able to load themepacks
+ (a bundle of GTK+ - The Gimp Toolkit - and KDE - The K Desktop
+ Environment  - skins) to enhance your application GUI controls such as
+ Buttons, Checks, Radios, Scrollbars, Progress Bar, Lists, Tables,
+ Internal Frames, Colors, Background Textures, Regular Windows.
+ .
+ Skin Look And Feel (aka SkinLF) also includes NativeSkin to create irregular
+ windows.
+
+Package: libskinlf-java-demo
+Architecture: all
+Depends: libskinlf-java, ${misc:Depends}
+Description: Swing Java docking framework - demos and examples
+ Skin Look And Feel allows Java developers to write skinnable application
+ using the Swing toolkit. Skin Look And Feel is able to load themepacks
+ (a bundle of GTK+ - The Gimp Toolkit - and KDE - The K Desktop
+ Environment - skins) to enhance your application GUI controls such as Buttons,
+ Checks, Radios, Scrollbars, Progress Bar, Lists, Tables, Internal Frames,
+ Colors, Background Textures, Regular Windows.
+ .
+ Skin Look And Feel (aka SkinLF) also includes NativeSkin to create irregular
+ windows.
+ .
+ This package contains the examples and demonstration files.
